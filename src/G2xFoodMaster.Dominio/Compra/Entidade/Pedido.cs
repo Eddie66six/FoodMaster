@@ -17,5 +17,7 @@ namespace G2xFoodMaster.Dominio.Compra.Entidade
         public virtual Funcionario.Entidade.Funcionario FuncionarioCancelamento { get; protected set; }
         public int? IdFuncionarioPedido { get; protected set; }
         public virtual Funcionario.Entidade.Funcionario FuncionarioPedido { get; protected set; }
+        public int IdFilial { get; protected set; }
+        public virtual Estabelecimento.Entidade.Filial Filial { get; protected set; }
     }
 }

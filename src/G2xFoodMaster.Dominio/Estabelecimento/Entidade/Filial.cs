@@ -1,4 +1,6 @@
-﻿namespace G2xFoodMaster.Dominio.Estabelecimento.Entidade
+﻿using System.Collections.Generic;
+
+namespace G2xFoodMaster.Dominio.Estabelecimento.Entidade
 {
     public class Filial
     {
@@ -6,5 +8,6 @@
         public string Nome { get; protected set; }
         public int IdEstabelecimento { get; protected set; }
         public virtual Estabelecimento Estabelecimento { get; protected set; }
+        public virtual List<Compra.Entidade.Pedido> Pedidos { get; set; }
     }
 }
