@@ -85,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="WebActivatorEx">
@@ -112,7 +111,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\Cliente\ClienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -127,6 +126,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\G2xFoodMaster.Aplicacao\G2xFoodMaster.Aplicacao.csproj">
+      <Project>{5240fc2e-aa91-4e90-a4a1-f390b5469f5f}</Project>
+      <Name>G2xFoodMaster.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G2xFoodMaster.Dominio\G2xFoodMaster.Dominio.csproj">
+      <Project>{af4e311e-7973-4df9-95f2-8cbfbe2eed47}</Project>
+      <Name>G2xFoodMaster.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\G2xFoodMaster.Infra.Cross-Cutting\G2xFoodMaster.Infra.Cross-Cutting.csproj">
       <Project>{333445e0-fa50-4761-b002-8634e57ac98f}</Project>
       <Name>G2xFoodMaster.Infra.Cross-Cutting</Name>

@@ -1,4 +1,8 @@
-﻿using G2xFoodMaster.Dominio.Cliente.Interface.Repositorio;
+﻿using G2xFoodMaster.Aplicacao.Cliente;
+using G2xFoodMaster.Aplicacao.Compra;
+using G2xFoodMaster.Aplicacao.Estabelecimento;
+using G2xFoodMaster.Aplicacao.Produto;
+using G2xFoodMaster.Dominio.Cliente.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Cliente.Interface.Servico;
 using G2xFoodMaster.Dominio.Compra.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Compra.Interface.Servico;
@@ -29,28 +33,36 @@ namespace G2xFoodMaster.Infra.Cross_Cutting.Ioc
             #region Cliente
             servico.Register<IClienteRepositorio, ClienteRepositorio>();
             servico.Register<IClienteServico, ClienteServico>();
+            servico.Register<IClienteApp, ClienteApp>();
             #endregion
             #region Compra
             servico.Register<IPedidoRepositorio, PedidoRepositorio>();
             servico.Register<IPedidoServico, PedidoServico>();
+            servico.Register<IPedidoApp, PedidoApp>();
             servico.Register<IPedidoItemRepositorio, PedidoItemRepositorio>();
             servico.Register<IPedidoItemServico, PedidoItemServico>();
+            servico.Register<IPedidoItemApp, PedidoItemApp>();
             servico.Register<IRecebimentoItemRepositorio, RecebimentoItemRepositorio>();
             servico.Register<IRecebimentoItemServico, RecebimentoItemServico>();
+            servico.Register<IRecebimentoItemApp, RecebimentoItemApp>();
             #endregion
             #region Estabelecimento
             servico.Register<IEstabelecimentoRepositorio, EstabelecimentoRepositorio>();
             servico.Register<IEstabelecimentoServico, EstabelecimentoServico>();
+            servico.Register<IEstabelecimentoApp, EstabelecimentoApp>();
             servico.Register<IFilialRepositorio, FilialRepositorio>();
             servico.Register<IFilialServico, FilialServico>();
+            servico.Register<IFilialApp, FilialApp>();
             #endregion
             #region Funcionario
             servico.Register<IFuncionarioRepositorio, FuncionarioRepositorio>();
             servico.Register<IClienteServico, ClienteServico>();
+            servico.Register<IClienteApp, ClienteApp>();
             #endregion
             #region Produto
             servico.Register<IProdutoRepositorio, ProdutoRepositorio>();
             servico.Register<IProdutoServico, ProdutoServico>();
+            servico.Register<IProdutoApp, ProdutoApp>();
             #endregion
 
             return servico;
