@@ -11,6 +11,9 @@ namespace G2xFoodMaster.Servico
             // Web API configuration and services
             config.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(SimpleInjectContainer.RegistrarServicos());
 
+            //config
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

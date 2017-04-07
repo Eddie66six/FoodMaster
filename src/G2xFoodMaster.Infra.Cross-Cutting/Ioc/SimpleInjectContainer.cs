@@ -1,6 +1,7 @@
 ﻿using G2xFoodMaster.Aplicacao.Cliente;
 using G2xFoodMaster.Aplicacao.Compra;
 using G2xFoodMaster.Aplicacao.Estabelecimento;
+using G2xFoodMaster.Aplicacao.Funcionario;
 using G2xFoodMaster.Aplicacao.Produto;
 using G2xFoodMaster.Dominio.Cliente.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Cliente.Interface.Servico;
@@ -9,11 +10,13 @@ using G2xFoodMaster.Dominio.Compra.Interface.Servico;
 using G2xFoodMaster.Dominio.Estabelecimento.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Estabelecimento.Interface.Servico;
 using G2xFoodMaster.Dominio.Funcionario.Interface.Repositorio;
+using G2xFoodMaster.Dominio.Funcionario.Interface.Servico;
 using G2xFoodMaster.Dominio.Produto.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Produto.Interface.Servico;
 using G2xFoodMaster.Dominio.Servicos.Cliente;
 using G2xFoodMaster.Dominio.Servicos.Compra;
 using G2xFoodMaster.Dominio.Servicos.Estabelecimento;
+using G2xFoodMaster.Dominio.Servicos.Funcionario;
 using G2xFoodMaster.Dominio.Servicos.Produto;
 using G2xFoodMaster.Infa.Data.Repositorio.Cliente;
 using G2xFoodMaster.Infa.Data.Repositorio.Compra;
@@ -56,8 +59,8 @@ namespace G2xFoodMaster.Infra.Cross_Cutting.Ioc
             #endregion
             #region Funcionario
             servico.Register<IFuncionarioRepositorio, FuncionarioRepositorio>();
-            servico.Register<IClienteServico, ClienteServico>();
-            servico.Register<IClienteApp, ClienteApp>();
+            servico.Register<IFuncionarioServico, FuncionarioServico>();
+            servico.Register<IFuncionarioApp, FuncionarioApp>();
             #endregion
             #region Produto
             servico.Register<IProdutoRepositorio, ProdutoRepositorio>();

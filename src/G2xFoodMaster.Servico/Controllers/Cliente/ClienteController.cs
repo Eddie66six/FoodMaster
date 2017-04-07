@@ -1,22 +1,25 @@
 ﻿using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using G2xFoodMaster.Aplicacao.Cliente;
 
 namespace G2xFoodMaster.Servico.Controllers.Cliente
 {
     [RoutePrefix("api/v1/cliente")]
-    public class ClienteController : ApiController
+    public class ClienteController : BaseController
     {
         private readonly IClienteApp _clienteApp;
         public ClienteController(IClienteApp clienteApp)
         {
             _clienteApp = clienteApp;
         }
-        [Route("/obterTodos")]
+        [Route("obterTodos")]
         [HttpGet]
-        public IEnumerable<Dominio.Cliente.Entidade.Cliente> ObterTodos()
+        public Task<HttpResponseMessage> ObterTodos()
         {
-            return _clienteApp.GetAll();
+            return CreateResponse(HttpStatusCode.OK, _clienteApp.GetAll());
         }
     }
 }
