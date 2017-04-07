@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using G2xFoodMaster.Infra.Cross_Cutting.Ioc;
+using SimpleInjector.Integration.WebApi;
 
 namespace G2xFoodMaster.Servico
 {
@@ -10,6 +9,7 @@ namespace G2xFoodMaster.Servico
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(SimpleInjectContainer.RegistrarServicos());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="Cliente\Entidade\Cliente.cs" />
     <Compile Include="Cliente\Interface\Repositorio\IClienteRepositorio.cs" />
+    <Compile Include="Cliente\Interface\Servico\IClienteServico.cs" />
     <Compile Include="Compra\Entidade\Pedido.cs" />
     <Compile Include="Compra\Entidade\PedidoItem.cs" />
     <Compile Include="Compra\Entidade\RecebimentoItem.cs" />
@@ -45,21 +46,38 @@
     <Compile Include="Compra\Interface\Repositorio\IPedidoItemRepositorio.cs" />
     <Compile Include="Compra\Interface\Repositorio\IPedidoRepositorio.cs" />
     <Compile Include="Compra\Interface\Repositorio\IRecebimentoItemRepositorio.cs" />
+    <Compile Include="Compra\Interface\Servico\IPedidoItemServico.cs" />
+    <Compile Include="Compra\Interface\Servico\IPedidoServico.cs" />
+    <Compile Include="Compra\Interface\Servico\IRecebimentoItemServico.cs" />
     <Compile Include="Estabelecimento\Entidade\Estabelecimento.cs" />
     <Compile Include="Estabelecimento\Entidade\Filial.cs" />
     <Compile Include="Estabelecimento\Interface\Repositorio\IEstabelecimentoRepositorio.cs" />
     <Compile Include="Estabelecimento\Interface\Repositorio\IFilialRepositorio.cs" />
+    <Compile Include="Estabelecimento\Interface\Servico\IEstabelecimentoServico.cs" />
+    <Compile Include="Estabelecimento\Interface\Servico\IFilialServico.cs" />
     <Compile Include="Funcionario\Entidade\Funcionario.cs" />
     <Compile Include="Funcionario\Enum\ETipoFuncionario.cs" />
     <Compile Include="Funcionario\Interface\Repositorio\IFuncionarioRepositorio.cs" />
+    <Compile Include="Funcionario\Interface\Servico\IFuncionarioServico.cs" />
     <Compile Include="Produto\Entidade\Produto.cs" />
     <Compile Include="Produto\Interface\Repositorio\IProdutoRepositorio.cs" />
+    <Compile Include="Produto\Interface\Servico\IProdutoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\Cliente\ClienteServico.cs" />
+    <Compile Include="Servicos\Compra\PedidoItemServico.cs" />
+    <Compile Include="Servicos\Compra\PedidoServico.cs" />
+    <Compile Include="Servicos\Compra\RecebimentoItemServico.cs" />
+    <Compile Include="Servicos\Estabelecimento\EstabelecimentoServico.cs" />
+    <Compile Include="Servicos\Estabelecimento\FilialServico.cs" />
+    <Compile Include="Servicos\Funcionario\FuncionarioServico.cs" />
+    <Compile Include="Servicos\Produto\ProdutoServico.cs" />
+    <Compile Include="Servicos\_Comun\BaseServico.cs" />
     <Compile Include="_Comun\Entidade\Base.cs" />
     <Compile Include="_Comun\Entidade\Login.cs" />
     <Compile Include="_Comun\Entidade\Pessoa.cs" />
     <Compile Include="_Comun\Enum\ETipoDePessoa.cs" />
     <Compile Include="_Comun\Interface\Repositorio\IBaseRepositorio.cs" />
+    <Compile Include="_Comun\Interface\Servico\IBaseServico.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
