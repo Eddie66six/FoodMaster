@@ -18,7 +18,7 @@ namespace G2xFoodMaster.Servico.Controllers.Cliente
         [HttpGet]
         public Task<HttpResponseMessage> ObterTodos()
         {
-            return CreateResponse(HttpStatusCode.OK, _clienteApp.GetAll());
+            return CreateResponse(HttpStatusCode.OK, _clienteApp.ObterTodos());
         }
     }
 }

@@ -14,29 +14,29 @@ namespace G2xFoodMaster.Dominio.Servicos._Comun
             _repositorio = repositorio;
         }
 
-        public void Add(TEntity obj)
+        public TEntity Adicionar(TEntity obj)
         {
-            _repositorio.Add(obj);
+            return _repositorio.Adicionar(obj);
         }
 
-        public TEntity GetById(int id)
+        public TEntity ObterPorId(int id)
         {
-            return _repositorio.GetById(id);
+            return _repositorio.ObterPorId(id);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public IEnumerable<TEntity> ObterTodos()
         {
-            return _repositorio.GetAll();
+            return _repositorio.ObterTodos();
         }
 
-        public void Update(TEntity obj)
+        public void Atualizar(TEntity obj)
         {
-            _repositorio.Update(obj);
+            _repositorio.Atualizar(obj);
         }
 
-        public void Remove(TEntity obj)
+        public void Remover(int id)
         {
-            _repositorio.Remove(obj);
+            _repositorio.Remover(id);
         }
 
         public void Dispose()

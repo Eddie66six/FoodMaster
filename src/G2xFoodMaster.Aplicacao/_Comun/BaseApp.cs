@@ -13,29 +13,29 @@ namespace G2xFoodMaster.Aplicacao._Comun
             _baseServico = baseServico;
         }
 
-        public void Add(TEntity obj)
+        public TEntity Adicionar(TEntity obj)
         {
-            _baseServico.Add(obj);
+            return _baseServico.Adicionar(obj);
         }
 
-        public TEntity GetById(int id)
+        public TEntity ObterPorId(int id)
         {
-            return _baseServico.GetById(id);
+            return _baseServico.ObterPorId(id);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public IEnumerable<TEntity> ObterTodos()
         {
-            return _baseServico.GetAll();
+            return _baseServico.ObterTodos();
         }
 
-        public void Update(TEntity obj)
+        public void Atualizar(TEntity obj)
         {
-            _baseServico.Update(obj);
+            _baseServico.Atualizar(obj);
         }
 
-        public void Remove(TEntity obj)
+        public void Remover(int id)
         {
-            _baseServico.Remove(obj);
+            _baseServico.Remover(id);
         }
 
         public void Dispose()

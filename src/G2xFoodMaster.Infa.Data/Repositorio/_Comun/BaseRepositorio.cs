@@ -10,26 +10,28 @@ namespace G2xFoodMaster.Infa.Data.Repositorio._Comun
     {
         protected Configuracao.DataContext Db = new Configuracao.DataContext();
 
-        public void Add(TEntity obj)
+        public TEntity Adicionar(TEntity obj)
         {
             Db.Set<TEntity>().Add(obj);
             Db.SaveChanges();
+            return obj;
         }
-        public TEntity GetById(int id)
+        public TEntity ObterPorId(int id)
         {
             return Db.Set<TEntity>().Find(id);
         }
-        public IEnumerable<TEntity> GetAll()
+        public IEnumerable<TEntity> ObterTodos()
         {
             return Db.Set<TEntity>().ToList();
         }
-        public void Update(TEntity obj)
+        public void Atualizar(TEntity obj)
         {
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();
         }
-        public void Remove(TEntity obj)
+        public void Remover(int id)
         {
+            var obj = ObterPorId(id);
             Db.Set<TEntity>().Remove(obj);
             Db.SaveChanges();
         }
