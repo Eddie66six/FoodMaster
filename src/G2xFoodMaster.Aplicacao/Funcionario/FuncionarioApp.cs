@@ -1,5 +1,4 @@
-﻿using System;
-using G2xFoodMaster.Aplicacao._Comun;
+﻿using G2xFoodMaster.Aplicacao._Comun;
 using G2xFoodMaster.Dominio.Funcionario.Interface.Servico;
 
 namespace G2xFoodMaster.Aplicacao.Funcionario

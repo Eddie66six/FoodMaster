@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace G2xFoodMaster.Servico.ViewModel
+﻿namespace G2xFoodMaster.Servico.ViewModel
 {
     public class LoginViewModel
     {

@@ -1,5 +1,4 @@
-﻿using System;
-using G2xFoodMaster.Dominio.Funcionario.Interface.Repositorio;
+﻿using G2xFoodMaster.Dominio.Funcionario.Interface.Repositorio;
 using G2xFoodMaster.Dominio.Funcionario.Interface.Servico;
 using G2xFoodMaster.Dominio.Servicos._Comun;
 

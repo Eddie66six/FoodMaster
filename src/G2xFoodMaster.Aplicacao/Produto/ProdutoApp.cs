@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using G2xFoodMaster.Aplicacao._Comun;
 using G2xFoodMaster.Dominio.Produto.Interface.Servico;
 
