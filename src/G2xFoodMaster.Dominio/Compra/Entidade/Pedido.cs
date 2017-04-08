@@ -5,7 +5,36 @@ namespace G2xFoodMaster.Dominio.Compra.Entidade
 {
     public class Pedido
     {
+        #region Contruct
+        protected Pedido()
+        {
+            DataDoPedido = DateTime.Now;
+        }
+
+        public Pedido(Cliente.Entidade.Cliente cliente)
+        {
+            Cliente = cliente;
+            DataDoPedido = DateTime.Now;
+        }
+        #endregion
+
+        #region Methods
+
+        public void AdicionarItens(List<PedidoItem> itens, Funcionario.Entidade.Funcionario funcionarioPedido)
+        {
+            ItensDoPedido = itens;
+        }
+
+        public void DefinirEntregador(Funcionario.Entidade.Funcionario funcionarioEntregador)
+        {
+            FuncionarioEntregador = funcionarioEntregador;
+        }
+        #endregion
+
+        #region Attr
         public int IdPedido { get; protected set; }
+        public DateTime DataDoPedido { get; protected set; }
+        public TimeSpan? HoraDaEntrega { get; protected set; }
         public int IdCliente { get; protected set; }
         public virtual Cliente.Entidade.Cliente Cliente { get; protected set; }
         public virtual List<PedidoItem> ItensDoPedido { get; protected set; }
@@ -17,7 +46,6 @@ namespace G2xFoodMaster.Dominio.Compra.Entidade
         public virtual Funcionario.Entidade.Funcionario FuncionarioCancelamento { get; protected set; }
         public int? IdFuncionarioPedido { get; protected set; }
         public virtual Funcionario.Entidade.Funcionario FuncionarioPedido { get; protected set; }
-        public int IdFilial { get; protected set; }
-        public virtual Estabelecimento.Entidade.Filial Filial { get; protected set; }
+        #endregion
     }
 }

@@ -23,6 +23,9 @@ namespace G2xFoodMaster.Infa.Data.Configuracao.Map.Produto
             HasRequired(t => t.FuncionarioCadastro)
                 .WithMany(t => t.ProdutosCadastrados)
                 .HasForeignKey(d => d.IdFuncionarioCadastro);
+            HasRequired(t => t.Filial)
+                .WithMany(t => t.Produtos)
+                .HasForeignKey(d => d.IdFilial);
         }
     }
 }

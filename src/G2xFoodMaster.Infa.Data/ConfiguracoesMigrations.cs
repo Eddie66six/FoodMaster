@@ -1,4 +1,12 @@
-﻿using System.Data.Entity.Migrations;
+﻿using System;
+using System.Data.Entity.Migrations;
+using G2xFoodMaster.Dominio.Cliente.Entidade;
+using G2xFoodMaster.Dominio.Compra.Entidade;
+using G2xFoodMaster.Dominio.Compra.Enum;
+using G2xFoodMaster.Dominio.Estabelecimento.Entidade;
+using G2xFoodMaster.Dominio.Funcionario.Entidade;
+using G2xFoodMaster.Dominio.Produto.Entidade;
+using G2xFoodMaster.Dominio._Comun.Entidade;
 
 namespace G2xFoodMaster.Infa.Data
 {

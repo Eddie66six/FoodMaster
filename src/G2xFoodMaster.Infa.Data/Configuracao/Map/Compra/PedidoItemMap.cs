@@ -24,7 +24,7 @@ namespace G2xFoodMaster.Infa.Data.Configuracao.Map.Compra
             HasRequired(t => t.Produto)
                 .WithMany(t => t.PedidoItems)
                 .HasForeignKey(d => d.IdProduto);
-            HasRequired(t => t.RecebimentoItem)
+            HasOptional(t => t.RecebimentoItem)
                 .WithMany()
                 .HasForeignKey(t => t.IdRecebimentoItem);
         }

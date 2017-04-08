@@ -17,9 +17,12 @@ namespace G2xFoodMaster.Infa.Data.Configuracao.Map.Funcionario
             //Property(t => t.IdCliente).HasColumnName("Cliente");
 
             // Relationships
-            HasRequired(t => t.FuncionarioCadastro)
+            HasOptional(t => t.FuncionarioCadastro)
                 .WithMany(t => t.FuncionarioCadastrados)
                 .HasForeignKey(d => d.IdFuncionarioCadastro);
+            HasRequired(t => t.Filial)
+                .WithMany(t => t.FuncionariosCadastrados)
+                .HasForeignKey(d => d.IdFilial);
         }
     }
 }
