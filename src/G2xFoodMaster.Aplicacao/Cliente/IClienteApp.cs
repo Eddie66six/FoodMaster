@@ -4,6 +4,6 @@ namespace G2xFoodMaster.Aplicacao.Cliente
 {
     public interface IClienteApp : IBaseApp<Dominio.Cliente.Entidade.Cliente>
     {
-        
+        bool Logar(string usuario, string senha);
     }
 }

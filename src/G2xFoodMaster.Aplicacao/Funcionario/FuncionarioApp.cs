@@ -1,4 +1,5 @@
-﻿using G2xFoodMaster.Aplicacao._Comun;
+﻿using System;
+using G2xFoodMaster.Aplicacao._Comun;
 using G2xFoodMaster.Dominio.Funcionario.Interface.Servico;
 
 namespace G2xFoodMaster.Aplicacao.Funcionario
@@ -9,6 +10,11 @@ namespace G2xFoodMaster.Aplicacao.Funcionario
         public FuncionarioApp(IFuncionarioServico funcionarioServico) : base(funcionarioServico)
         {
             _funcionarioServico = funcionarioServico;
+        }
+
+        public bool Logar(string usuario, string senha)
+        {
+            return _funcionarioServico.Logar(usuario, senha);
         }
     }
 }

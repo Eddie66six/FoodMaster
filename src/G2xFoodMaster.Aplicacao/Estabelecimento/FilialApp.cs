@@ -9,6 +9,7 @@ namespace G2xFoodMaster.Aplicacao.Estabelecimento
         private readonly IFilialServico _filialServico;
         public FilialApp(IFilialServico filialServico) : base(filialServico)
         {
+            _filialServico = filialServico;
         }
     }
 }

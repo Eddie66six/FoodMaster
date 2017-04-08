@@ -4,6 +4,6 @@ namespace G2xFoodMaster.Aplicacao.Funcionario
 {
     public interface IFuncionarioApp:IBaseApp<Dominio.Funcionario.Entidade.Funcionario>
     {
-        
+        bool Logar(string usuario, string senha);
     }
 }

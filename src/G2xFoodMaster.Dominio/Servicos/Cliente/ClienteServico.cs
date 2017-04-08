@@ -6,10 +6,15 @@ namespace G2xFoodMaster.Dominio.Servicos.Cliente
 {
     public class ClienteServico : BaseServico<Dominio.Cliente.Entidade.Cliente>, IClienteServico
     {
-        private readonly IClienteRepositorio _repositorio;
-        public ClienteServico(IClienteRepositorio repositorio) : base(repositorio)
+        private readonly IClienteRepositorio _clienteRepositorio;
+        public ClienteServico(IClienteRepositorio clienteRepositorio) : base(clienteRepositorio)
         {
-            _repositorio = repositorio;
+            _clienteRepositorio = clienteRepositorio;
+        }
+
+        public bool Logar(string usuario, string senha)
+        {
+            return _clienteRepositorio.Logar(usuario, senha);
         }
     }
 }

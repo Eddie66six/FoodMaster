@@ -1,4 +1,5 @@
-﻿using G2xFoodMaster.Aplicacao._Comun;
+﻿using System;
+using G2xFoodMaster.Aplicacao._Comun;
 using G2xFoodMaster.Dominio.Cliente.Interface.Servico;
 
 namespace G2xFoodMaster.Aplicacao.Cliente
@@ -9,6 +10,11 @@ namespace G2xFoodMaster.Aplicacao.Cliente
         public ClienteApp(IClienteServico clienteServico) : base(clienteServico)
         {
             _clienteServico = clienteServico;
+        }
+
+        public bool Logar(string usuario, string senha)
+        {
+            return _clienteServico.Logar(usuario, senha);
         }
     }
 }

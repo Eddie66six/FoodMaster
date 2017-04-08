@@ -6,6 +6,7 @@ using G2xFoodMaster.Aplicacao.Produto;
 
 namespace G2xFoodMaster.Servico.Controllers.Produto
 {
+    [Authorize]
     [RoutePrefix("api/v1/produto")]
     public class ProdutoController : BaseController
     {

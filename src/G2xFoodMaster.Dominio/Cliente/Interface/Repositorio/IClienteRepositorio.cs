@@ -6,5 +6,6 @@ namespace G2xFoodMaster.Dominio.Cliente.Interface.Repositorio
     public interface IClienteRepositorio : IBaseRepositorio<Entidade.Cliente>
     {
         IEnumerable<Entidade.Cliente> ObterPorNome(string nome);
+        bool Logar(string usuario, string senha);
     }
 }

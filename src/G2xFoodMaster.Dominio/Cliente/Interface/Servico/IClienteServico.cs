@@ -4,6 +4,6 @@ namespace G2xFoodMaster.Dominio.Cliente.Interface.Servico
 {
     public interface IClienteServico : IBaseServico<Entidade.Cliente>
     {
-        
+        bool Logar(string usuario, string senha);
     }
 }
