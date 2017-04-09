@@ -1,4 +1,4 @@
-﻿namespace G2xFoodMaster.Servico.ViewModel
+﻿namespace G2xFoodMaster.Aplicacao._Comun.ViewModel
 {
     public class LoginViewModel
     {

@@ -35,7 +35,7 @@ namespace G2xFoodMaster.Servico.Controllers.Usuario
 
             var ticket = ConfigureAuthenticationTicket(identity);
             var token = Startup.OAuthServerOptions.AccessTokenFormat.Protect(ticket);
-            return CreateResponse(HttpStatusCode.OK, new ViewModel.LoginViewModel { Autorizado = true, Token = token });
+            return CreateResponse(HttpStatusCode.OK, new Aplicacao._Comun.ViewModel.LoginViewModel { Autorizado = true, Token = token });
         }
 
         [HttpPost]
@@ -53,7 +53,7 @@ namespace G2xFoodMaster.Servico.Controllers.Usuario
 
             var ticket = ConfigureAuthenticationTicket(identity);
             var token = Startup.OAuthServerOptions.AccessTokenFormat.Protect(ticket);
-            return CreateResponse(HttpStatusCode.OK, new ViewModel.LoginViewModel { Autorizado = true, Token = token });
+            return CreateResponse(HttpStatusCode.OK, new Aplicacao._Comun.ViewModel.LoginViewModel { Autorizado = true, Token = token });
         }
     }
 }

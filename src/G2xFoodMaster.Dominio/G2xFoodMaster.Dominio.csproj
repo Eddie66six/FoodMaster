@@ -42,6 +42,7 @@
     <Compile Include="Compra\Entidade\RecebimentoItem.cs" />
     <Compile Include="Compra\Enum\EBandeiras.cs" />
     <Compile Include="Compra\Enum\EFormaDePagamento.cs" />
+    <Compile Include="Compra\Enum\EStatusDoPedido.cs" />
     <Compile Include="Compra\Enum\ETipoDesconto.cs" />
     <Compile Include="Compra\Interface\Repositorio\IPedidoItemRepositorio.cs" />
     <Compile Include="Compra\Interface\Repositorio\IPedidoRepositorio.cs" />
