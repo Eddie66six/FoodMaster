@@ -15,11 +15,17 @@ namespace G2xFoodMaster.Servico.Controllers.Produto
         {
             _produtoApp = produtoApp;
         }
-        [Route("{idEstabelecimento}/{idFilial}/obterTodos")]
+        [Route("{idFilial}/obterTodos")]
         [HttpGet]
-        public Task<HttpResponseMessage> ObterTodos(int idEstabelecimento, int idFilial)
+        public Task<HttpResponseMessage> ObterTodos(int idFilial)
         {
-            return CreateResponse(HttpStatusCode.OK, _produtoApp.ObterTodos(idEstabelecimento,idFilial));
+            return CreateResponse(HttpStatusCode.OK, _produtoApp.ObterTodos(idFilial));
+        }
+        [Route("{idFilial}/obterPorNome/{nome}")]
+        [HttpGet]
+        public Task<HttpResponseMessage> ObterPorNome(int idFilial, string nome)
+        {
+            return CreateResponse(HttpStatusCode.OK, _produtoApp.ObterPorNome(idFilial, nome));
         }
     }
 }

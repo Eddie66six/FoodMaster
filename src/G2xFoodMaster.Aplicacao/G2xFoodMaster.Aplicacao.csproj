@@ -53,6 +53,7 @@
     <Compile Include="Estabelecimento\FilialApp.cs" />
     <Compile Include="Estabelecimento\IEstabelecimentoApp.cs" />
     <Compile Include="Estabelecimento\IFilialApp.cs" />
+    <Compile Include="Estabelecimento\ViewModel\FilialDetalheViewModel.cs" />
     <Compile Include="Funcionario\FuncionarioApp.cs" />
     <Compile Include="Funcionario\IFuncionarioApp.cs" />
     <Compile Include="Produto\IProdutoApp.cs" />

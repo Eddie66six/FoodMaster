@@ -6,5 +6,6 @@ namespace G2xFoodMaster.Dominio.Estabelecimento.Interface.Repositorio
     public interface IFilialRepositorio : IBaseRepositorio<Entidade.Filial>
     {
         IEnumerable<Entidade.Filial> ObterPorIdEstabelecimento(int idEstabelecimento);
+        IEnumerable<Entidade.Filial> ObterPorNome(string nome, string cidade);
     }
 }

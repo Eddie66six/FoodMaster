@@ -12,9 +12,19 @@ namespace G2xFoodMaster.Aplicacao.Produto
             _produtoServico = produtoServico;
         }
 
-        public IEnumerable<Dominio.Produto.Entidade.Produto> ObterTodos(int idEstabelecimento, int idFilial)
+        public IEnumerable<Dominio.Produto.Entidade.Produto> ObterDescricao(int idFilial, string descricao)
         {
-            return _produtoServico.ObterTodos(idEstabelecimento, idFilial);
+            return _produtoServico.ObterDescricao(idFilial, descricao);
+        }
+
+        public IEnumerable<Dominio.Produto.Entidade.Produto> ObterPorNome(int idFilial, string nome)
+        {
+            return _produtoServico.ObterPorNome(idFilial, nome);
+        }
+
+        public IEnumerable<Dominio.Produto.Entidade.Produto> ObterTodos(int idFilial)
+        {
+            return _produtoServico.ObterTodos(idFilial);
         }
     }
 }

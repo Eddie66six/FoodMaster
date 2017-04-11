@@ -143,6 +143,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Cliente\ClienteController.cs" />
+    <Compile Include="Controllers\Estabelecimento\FiliaisController.cs" />
     <Compile Include="Controllers\Produto\ProdutoController.cs" />
     <Compile Include="Controllers\Usuario\UsuarioController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

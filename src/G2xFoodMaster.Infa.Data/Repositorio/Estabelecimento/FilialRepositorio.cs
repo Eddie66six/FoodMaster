@@ -11,5 +11,15 @@ namespace G2xFoodMaster.Infa.Data.Repositorio.Estabelecimento
         {
             return Db.Filial.Where(p => p.IdEstabelecimento == idEstabelecimento).ToList();
         }
+
+        public IEnumerable<Filial> ObterPorNome(string nome, string cidade)
+        {
+            var query = Db.Filial.Include("Estabelecimento").Where(p => p.Nome.Contains(nome));
+            if (!string.IsNullOrWhiteSpace(cidade))
+            {
+                query = query.Where(p => p.Cidade.Contains(cidade));
+            }
+            return query.ToList();
+        }
     }
 }
