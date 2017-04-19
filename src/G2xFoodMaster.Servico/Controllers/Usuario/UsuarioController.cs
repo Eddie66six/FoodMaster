@@ -29,7 +29,6 @@ namespace G2xFoodMaster.Servico.Controllers.Usuario
                 return null;
 
             var identity = new ClaimsIdentity("Bearer");
-            identity.AddClaim(new Claim("teste", "teste"));
             //var principal = new GenericPrincipal(identity, usuario.Permissoes.ToArray());
             //identity.AddClaims(principal.Claims);
 

@@ -14,23 +14,15 @@ namespace G2xFoodMaster.Servico.Controllers.Cliente
     public class ClienteController : BaseController
     {
         private readonly IClienteApp _clienteApp;
-        private readonly IPedidoApp _pedidoApp;
-        public ClienteController(IClienteApp clienteApp, IPedidoApp pedidoApp)
+        public ClienteController(IClienteApp clienteApp)
         {
             _clienteApp = clienteApp;
-            _pedidoApp = pedidoApp;
         }
         [Route("obterTodos")]
         [HttpGet]
         public Task<HttpResponseMessage> ObterTodos()
         {
             return CreateResponse(HttpStatusCode.OK, _clienteApp.ObterTodos());
-        }
-        [Route("obterPeidos")]
-        [HttpGet]
-        public Task<HttpResponseMessage> ObterPedidos(int idCliente,DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido)
-        {
-            return CreateResponse(HttpStatusCode.OK, _pedidoApp.ObterPorIdCliente(idCliente,dataInicio,dataFim,statusDoPedido));
         }
     }
 }

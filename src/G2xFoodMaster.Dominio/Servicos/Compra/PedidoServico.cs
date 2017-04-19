@@ -8,7 +8,7 @@ using G2xFoodMaster.Dominio.Servicos._Comun;
 
 namespace G2xFoodMaster.Dominio.Servicos.Compra
 {
-    public class PedidoServico : BaseServico<Dominio.Compra.Entidade.Pedido>, IPedidoServico
+    public class PedidoServico : BaseServico<Pedido>, IPedidoServico
     {
         private readonly IPedidoRepositorio _pedidoRepositorio;
         public PedidoServico(IPedidoRepositorio pedidoRepositorio) : base(pedidoRepositorio)
@@ -16,24 +16,24 @@ namespace G2xFoodMaster.Dominio.Servicos.Compra
             _pedidoRepositorio = pedidoRepositorio;
         }
 
-        public IEnumerable<Pedido> ObterPorIdCliente(int idCliente, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido)
+        public IEnumerable<Pedido> ObterPorIdCliente(int idCliente, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip)
         {
-            return _pedidoRepositorio.ObterPorIdCliente(idCliente, includes,dataInicio,dataFim,statusDoPedido);
+            return _pedidoRepositorio.ObterPorIdCliente(idCliente, includes, dataInicio, dataFim, statusDoPedido, take, skip);
         }
 
-        public IEnumerable<Pedido> ObterPorIdEstabelecimento(int idEstabelecimento, string[] includes)
+        public IEnumerable<Pedido> ObterPorIdEstabelecimento(int idEstabelecimento, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip)
         {
-            return _pedidoRepositorio.ObterPorIdEstabelecimento(idEstabelecimento, includes);
+            return _pedidoRepositorio.ObterPorIdEstabelecimento(idEstabelecimento, includes, dataInicio, dataFim, statusDoPedido, take, skip);
         }
 
-        public IEnumerable<Pedido> ObterPorIdFilial(int idFilial, string[] includes)
+        public IEnumerable<Pedido> ObterPorIdFilial(int idFilial, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip)
         {
-            return _pedidoRepositorio.ObterPorIdFilial(idFilial, includes);
+            return _pedidoRepositorio.ObterPorIdFilial(idFilial, includes, dataInicio, dataFim, statusDoPedido, take, skip);
         }
 
-        public IEnumerable<Pedido> ObterPorIdFuncionarioEntregador(int idFuncionarioEntregador, string[] includes)
+        public IEnumerable<Pedido> ObterPorIdFuncionarioEntregador(int idFuncionarioEntregador, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip)
         {
-            return _pedidoRepositorio.ObterPorIdFuncionarioEntregador(idFuncionarioEntregador, includes);
+            return _pedidoRepositorio.ObterPorIdFuncionarioEntregador(idFuncionarioEntregador, includes, dataInicio, dataFim, statusDoPedido, take, skip);
         }
     }
 }

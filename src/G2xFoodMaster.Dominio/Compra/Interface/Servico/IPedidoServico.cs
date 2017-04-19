@@ -7,9 +7,9 @@ namespace G2xFoodMaster.Dominio.Compra.Interface.Servico
 {
     public interface IPedidoServico : IBaseServico<Entidade.Pedido>
     {
-        IEnumerable<Entidade.Pedido> ObterPorIdCliente(int idCliente, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido);
-        IEnumerable<Entidade.Pedido> ObterPorIdFilial(int idFilial, string[] includes);
-        IEnumerable<Entidade.Pedido> ObterPorIdEstabelecimento(int idEstabelecimento, string[] includes);
-        IEnumerable<Entidade.Pedido> ObterPorIdFuncionarioEntregador(int idFuncionarioEntregador, string[] includes);
+        IEnumerable<Entidade.Pedido> ObterPorIdCliente(int idCliente, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip);
+        IEnumerable<Entidade.Pedido> ObterPorIdFilial(int idFilial, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip);
+        IEnumerable<Entidade.Pedido> ObterPorIdEstabelecimento(int idEstabelecimento, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip);
+        IEnumerable<Entidade.Pedido> ObterPorIdFuncionarioEntregador(int idFuncionarioEntregador, string[] includes, DateTime dataInicio, DateTime dataFim, EStatusDoPedido? statusDoPedido, int take, int skip);
     }
 }
