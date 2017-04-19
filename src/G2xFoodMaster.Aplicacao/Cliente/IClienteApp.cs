@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using G2xFoodMaster.Aplicacao._Comun;
-using G2xFoodMaster.Dominio.Compra.Entidade;
+﻿using G2xFoodMaster.Aplicacao._Comun;
 
 namespace G2xFoodMaster.Aplicacao.Cliente
 {

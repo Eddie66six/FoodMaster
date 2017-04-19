@@ -10,10 +10,10 @@ namespace G2xFoodMaster.Servico.Controllers
 {
     public class BaseController : ApiController
     {
-        private HttpResponseMessage _responseMessage;
+        //private HttpResponseMessage _responseMessage;
         protected BaseController()
         {
-            _responseMessage = new HttpResponseMessage();
+            //_responseMessage = new HttpResponseMessage();
         }
 
         protected Task<HttpResponseMessage> CreateResponse(HttpStatusCode code, object result)

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using G2xFoodMaster.Aplicacao.Cliente;
-using G2xFoodMaster.Aplicacao.Compra;
-using G2xFoodMaster.Dominio.Compra.Enum;
 
 namespace G2xFoodMaster.Servico.Controllers.Cliente
 {
