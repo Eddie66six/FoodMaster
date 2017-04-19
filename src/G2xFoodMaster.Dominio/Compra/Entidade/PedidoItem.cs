@@ -10,13 +10,12 @@ namespace G2xFoodMaster.Dominio.Compra.Entidade
             
         }
 
-        public PedidoItem(decimal desconto,ETipoDesconto? tipoDesconto,Produto.Entidade.Produto produto,Pedido pedido)
+        public PedidoItem(decimal desconto,ETipoDesconto? tipoDesconto,Produto.Entidade.Produto produto)
         {
             Desconto = desconto;
             TipoDeDesconto = tipoDesconto;
             Produto = produto;
             ValorProduto = produto.Valor;
-            Pedido = pedido;
         }
         #endregion
 

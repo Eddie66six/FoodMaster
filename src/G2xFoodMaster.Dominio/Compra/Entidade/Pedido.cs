@@ -12,6 +12,7 @@ namespace G2xFoodMaster.Dominio.Compra.Entidade
         {
             DataDoPedido = DateTime.Now;
             StatusDoPedido = EStatusDoPedido.Aberto;
+            ItensDoPedido = new List<PedidoItem>();
         }
 
         public Pedido(Cliente.Entidade.Cliente cliente)
